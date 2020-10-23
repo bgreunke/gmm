@@ -470,7 +470,7 @@ void GaussianMixture::MLE(
     std::memcpy(this->mu, work_mu, m*d*sizeof(double));
     std::memcpy(this->Sigma, work_Sigma, m*d*d*sizeof(double));
 
-    this->alloc.deallocate(work_mem, m*d*d+m*d+m+2*n*d+2*m*n+n+m);
+    this->alloc.deallocate(work_mem, work_size);
 }
 
 #endif
